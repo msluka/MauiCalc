@@ -11,7 +11,7 @@
     <!--#endregion-->
     
     <!--#region Labels -->
-    <Style Class="LableText" TargetType="Label">
+    <Style Class="LabelText" TargetType="Label">
         <Setter Property="TextColor" 
                 Value="{AppThemeBinding Light={StaticResource LightText},
                                         Dark={StaticResource DarkText}}" />
