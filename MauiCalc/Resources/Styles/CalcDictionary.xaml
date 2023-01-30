@@ -9,5 +9,24 @@
         <Setter Property="Margin" Value="0,0,25,0" />
     </Style>
     <!--#endregion-->
+    
+    <!--#region Labels -->
+    <Style Class="LableText" TargetType="Label">
+        <Setter Property="TextColor" 
+                Value="{AppThemeBinding Light={StaticResource LightText},
+                                        Dark={StaticResource DarkText}}" />
+        <Setter Property="HorizontalTextAlignment" Value="End" />
+    </Style>
+    
+    <Style Class="LabelOperations" TargetType="Label">
+        <Setter Property="FontFamily" Value="SublimaLight"/>
+        <Setter Property="FontSize" Value="25"/>
+    </Style>
+
+    <Style Class="LabelResult" TargetType="Label">
+        <Setter Property="FontFamily" Value="SublimaBold"/>
+        <Setter Property="FontSize" Value="50"/>
+    </Style>
+    <!--#endregion-->
 
 </ResourceDictionary>
