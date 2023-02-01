@@ -29,4 +29,13 @@
     </Style>
     <!--#endregion-->
 
+    <!--#region BoxView -->
+    <Style TargetType="BoxView">
+        <Setter Property="Color" 
+                Value="{AppThemeBinding Light={StaticResource LightPrimary},
+                                        Dark={StaticResource DarkPrimary}}" />
+        <Setter Property="CornerRadius" Value="30,30,0,0"/>
+    </Style>
+    <!--#endregion-->
+
 </ResourceDictionary>

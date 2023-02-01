@@ -12,6 +12,74 @@
             <Label Text="25"
                    StyleClass="LabelText, LabelResult"/>
         </VerticalStackLayout>
-        
+        <Grid Grid.Row="1">
+            <BoxView/>
+            <Grid ColumnDefinitions="*,*,*,*"
+                  ColumnSpacing="15"
+                  RowDefinitions="*,*,*,*,*"
+                  RowSpacing="15"
+                  Padding="15">
+                <!--#region Row 1 -->
+                <Button Text="AC"/>
+                <Button Text="⌫"
+                        Grid.Column="1"/>
+                <Button Text="%"
+                        Grid.Column="2"/>
+                <Button Text="/"
+                        Grid.Column="3"/>
+                <!--#endregion-->
+                <!--#region Row 2 -->
+                <Button Text="7"
+                        Grid.Row="1"/>
+                <Button Text="8"
+                        Grid.Row="1"
+                        Grid.Column="1"/>
+                <Button Text="9"
+                        Grid.Row="1"
+                        Grid.Column="2"/>
+                <Button Text="*"
+                        Grid.Row="1"
+                        Grid.Column="3"/>
+                <!--#endregion-->
+                <!--#region Row 3 -->
+                <Button Text="4"
+                        Grid.Row="2"/>
+                <Button Text="5"
+                        Grid.Row="2"
+                        Grid.Column="1"/>
+                <Button Text="6"
+                        Grid.Row="2"
+                        Grid.Column="2"/>
+                <Button Text="-"
+                        Grid.Row="2"
+                        Grid.Column="3"/>
+                <!--#endregion-->
+                <!--#region Row 3 -->
+                <Button Text="1"
+                        Grid.Row="3"/>
+                <Button Text="2"
+                        Grid.Row="3"
+                        Grid.Column="1"/>
+                <Button Text="3"
+                        Grid.Row="3"
+                        Grid.Column="2"/>
+                <Button Text="+"
+                        Grid.Row="3"
+                        Grid.Column="3"/>
+                <!--#endregion-->
+                <!--#region Row 4 -->
+                <Button Text="0"
+                        Grid.Row="4"
+                        Grid.ColumnSpan="2"/>              
+                <Button Text="."
+                        Grid.Row="4"
+                        Grid.Column="2"/>
+                <Button Text="="
+                        Grid.Row="4"
+                        Grid.Column="3"/>
+                <!--#endregion-->
+
+            </Grid>
+        </Grid>
     </Grid>
 </ContentPage>
