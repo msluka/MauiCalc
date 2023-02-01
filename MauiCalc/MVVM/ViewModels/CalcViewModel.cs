@@ -32,7 +32,19 @@ namespace MauiCalc.MVVM.ViewModels
 
                 if (Formula.Length >0) {
 
-                    Formula = Formula.Substring(0, Formula.Length - 1);
+                    char lastCharacter = Formula[Formula.Length - 1];
+                    if (char.IsWhiteSpace(lastCharacter)) {
+
+                        // remove last 3 characters from the string
+                        Formula = Formula.Substring(0, Formula.Length - 3);
+
+                    }
+                    else {
+
+                        // remove last 1 character from the string
+                        Formula = Formula.Substring(0, Formula.Length - 1);
+                    }
+                    
                 
                 }
             
