@@ -21,10 +21,12 @@
                   Padding="15">
                 <!--#region Row 1 -->
                 <Button Text="AC"
-                        Style="{StaticResource YellowButton}"/>
+                        Style="{StaticResource YellowButton}"
+                        Command="{Binding ResetCommand}"/>
                 <Button Text="⌫"
                         Grid.Column="1"
-                        Style="{StaticResource YellowButton}"/>
+                        Style="{StaticResource YellowButton}"
+                        Command="{Binding BackspaceCommand}"/>
                 <Button Text="%"
                         Grid.Column="2"
                         Style="{StaticResource YellowButton}"
