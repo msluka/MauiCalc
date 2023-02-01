@@ -1,4 +1,5 @@
-﻿using PropertyChanged;
+﻿using Dangl.Calculator;
+using PropertyChanged;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,5 +37,17 @@ namespace MauiCalc.MVVM.ViewModels
                 }
             
             });
+
+        public ICommand CalculateCommand => new Command(() => {
+
+            if (Formula.Length == 0)
+            {
+                return;
+            }
+            var calculation = Calculator.Calculate(Formula);
+            Result = calculation.Result.ToString();
+
+
+        });
     }
 }
