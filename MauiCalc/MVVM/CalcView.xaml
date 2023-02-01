@@ -7,6 +7,8 @@
     <Grid RowDefinitions=".4*,.6*">
 
         <VerticalStackLayout>
+            <!--<Label Text="{Binding NumbersListStr}"
+                   StyleClass="LabelText, LabelOperations"/>-->
             <Label Text="{Binding Formula}"
                    StyleClass="LabelText, LabelOperations"/>
             <Label Text="{Binding Result}"
@@ -64,7 +66,7 @@
                 <Button Text="4"
                         Grid.Row="2"
                          Command="{Binding OperationCommand}"
-                        CommandParameter="7"/>
+                        CommandParameter="4"/>
                 <Button Text="5"
                         Grid.Row="2"
                         Grid.Column="1"
