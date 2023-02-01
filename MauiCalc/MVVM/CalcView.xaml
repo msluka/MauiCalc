@@ -27,10 +27,14 @@
                         Style="{StaticResource YellowButton}"/>
                 <Button Text="%"
                         Grid.Column="2"
-                        Style="{StaticResource YellowButton}"/>
+                        Style="{StaticResource YellowButton}"
+                        Command="{Binding OperationCommand}"
+                        CommandParameter=" % "/>
                 <Button Text="/"
                         Grid.Column="3"
-                        Style="{StaticResource RedButton}"/>
+                        Style="{StaticResource RedButton}"
+                        Command="{Binding OperationCommand}"
+                        CommandParameter=" / "/>
                 <!--#endregion-->
                 <!--#region Row 2 -->
                 <Button Text="7"
@@ -50,7 +54,9 @@
                 <Button Text="*"
                         Grid.Row="1"
                         Grid.Column="3"
-                        Style="{StaticResource RedButton}"/>
+                        Style="{StaticResource RedButton}"
+                        Command="{Binding OperationCommand}"
+                        CommandParameter=" * "/>
                 <!--#endregion-->
                 <!--#region Row 3 -->
                 <Button Text="4"
@@ -70,7 +76,9 @@
                 <Button Text="-"
                         Grid.Row="2"
                         Grid.Column="3"
-                        Style="{StaticResource RedButton}"/>
+                        Style="{StaticResource RedButton}"
+                        Command="{Binding OperationCommand}"
+                        CommandParameter=" - "/>
                 <!--#endregion-->
                 <!--#region Row 3 -->
                 <Button Text="1"
@@ -89,7 +97,9 @@
                         CommandParameter="3"/>
                 <Button Text="+"
                         Grid.Row="3"
-                        Grid.Column="3"/>
+                        Grid.Column="3"
+                        Command="{Binding OperationCommand}"
+                        CommandParameter=" + "/>
                 <!--#endregion-->
                 <!--#region Row 4 -->
                 <Button Text="0"
