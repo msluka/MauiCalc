@@ -31,9 +31,7 @@
                         Command="{Binding BackspaceCommand}"/>
                 <Button Text="%"
                         Grid.Column="2"
-                        Style="{StaticResource YellowButton}"
-                        Command="{Binding OperationCommand}"
-                        CommandParameter=" % "/>
+                        Style="{StaticResource YellowButton}"/>
                 <Button Text="/"
                         Grid.Column="3"
                         Style="{StaticResource RedButton}"

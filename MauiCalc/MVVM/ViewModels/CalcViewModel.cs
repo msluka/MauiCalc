@@ -23,7 +23,10 @@ namespace MauiCalc.MVVM.ViewModels
         public void CheckLastOperator(string buttonValue) {
 
             //string[] operators = { " % ", " / ", " * ", " - ", " + " };
-         
+
+            // Vibration.Default.Vibrate(1);
+            HapticFeedback.Default.Perform(HapticFeedbackType.LongPress);
+
             if (Array.IndexOf(operators, buttonValue) >= 0) 
             {
                 if (Array.IndexOf(operators, LastOperator) >= 0)
@@ -61,6 +64,8 @@ namespace MauiCalc.MVVM.ViewModels
         public ICommand ResetCommand =>
             new Command(() =>
             {
+                // Vibration.Default.Vibrate(10);
+                HapticFeedback.Default.Perform(HapticFeedbackType.LongPress);
 
                 Result = "0";
                 Formula = "";
@@ -72,6 +77,9 @@ namespace MauiCalc.MVVM.ViewModels
 
         public ICommand BackspaceCommand =>
             new Command(() => {
+
+                // Vibration.Default.Vibrate(10);
+                HapticFeedback.Default.Perform(HapticFeedbackType.LongPress);
 
                 if (Formula.Length >0) {
 
@@ -104,6 +112,9 @@ namespace MauiCalc.MVVM.ViewModels
 
         public ICommand CalculateCommand => new Command(() => {
 
+            // Vibration.Default.Vibrate(10);
+            HapticFeedback.Default.Perform(HapticFeedbackType.LongPress);
+
             if (Formula.Length == 0)
             {
                 return;
@@ -113,7 +124,7 @@ namespace MauiCalc.MVVM.ViewModels
                 return;
             }
             var calculation = Calculator.Calculate(Formula);
-            Result = calculation.Result.ToString();
+            Result = calculation.Result.ToString("N2");
 
 
         });
